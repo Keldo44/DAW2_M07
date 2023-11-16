@@ -16,7 +16,7 @@ class personas_model{
     }
     public function add_personas($dni,$nombre,$email,$curso){
         // Insertamos los datos en la base de datos
-        $query = $this->db->prepare("INSERT INTO alumnos (dni, nombre, email, curso) VALUES ($dni, $nombre, $email, $curso)");
+        $query = $this->db->prepare("INSERT INTO alumnos (dni, nombre, email, curso) VALUES ('$dni', '$nombre', '$email', $curso)");
         $query->execute();
 
         // Devolvemos la persona
