@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2023 a las 20:46:35
+-- Tiempo de generación: 19-11-2023 a las 16:29:50
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.26
 
@@ -53,6 +53,13 @@ CREATE TABLE `categoria` (
   `nombre` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `nombre`) VALUES
+(1, '[value-2]');
+
 -- --------------------------------------------------------
 
 --
@@ -72,9 +79,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `nombre`, `precio`, `cantidad`, `id_category`) VALUES
-(2, 'pescado', 3424, 2423, 0),
-(3, 'faf', 123, 14, 0),
-(4, 'xarus', 123, 123, 0);
+(2, '3', 1234, 33, 1),
+(3, '33', 33, 33, 1),
+(4, 'xarus', 123, 123, 1),
+(5, 'ww', 22, 22, 1);
 
 -- --------------------------------------------------------
 
@@ -97,7 +105,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `pass`, `admin`, `nombre`, `apellidos`, `email`) VALUES
-(9, 'admin', 'dd94709528bb1c83d08f3088d4043f4742891f4f', 1, 'Administrador', 'Administrador', 'admin@test.com');
+(9, 'Admin', 'dd94709528bb1c83d08f3088d4043f4742891f4f', 1, 'Administrador', 'Administrador', 'admin@test.com');
 
 --
 -- Índices para tablas volcadas
@@ -141,19 +149,19 @@ ALTER TABLE `carrito`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
